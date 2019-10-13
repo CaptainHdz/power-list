@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
 
+const Todo = require("./models/todo")
 
 app.use(cors());
 app.use(bodyParser.json());
