@@ -10,4 +10,6 @@ Completed: {type: Boolean, requireed: true}
 
 });
 
-module.exports = mongoose.model('Todo', Todo);
+const TodoItem = mongoose.model('Todo', Todo)
+
+module.exports = TodoItem;
