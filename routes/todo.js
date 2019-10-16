@@ -8,6 +8,9 @@ router.route("/")
 .get(todoController.findAll)
 .post(todoController.Create);
 
+router.route("/:id")
+.get(todoController.findId)
+
 router.route("/Create")
 
 module.exports = router;

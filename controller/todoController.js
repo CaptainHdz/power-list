@@ -11,6 +11,14 @@ module.exports = {
             res.json(todos)
         })
     },
+    findId: (req, res) => {
+        let id = req.params.id;
+        TodoItem.findById(id, (err, todo) => {
+            (err)? console.log(err) : console.log(todo);
+            res.json(todo)
+            
+        })
+    },
     Create: (req, res) => {
         //Some more fancy code 
     }
