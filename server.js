@@ -17,7 +17,7 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .catch(err => console.log("MONGODB ERROR: " + err))
 
 
-app.use("/todos", require("./routes/todo"))
+app.use("/todos", require("./routes/api/todo"))
 
 
 app.listen(PORT, () => {

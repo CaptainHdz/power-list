@@ -19,7 +19,23 @@ module.exports = {
             
         })
     },
-    Create: (req, res) => {
+    create: (req, res) => {
         //Some more fancy code 
+        TodoItem.create(req.body)
+        .then((response) => {
+            res.json(response);
+        }).catch( err => res.status(422).json(err));
+    },
+    update: (req, res) => {
+        TodoItem.findOneAndUpdate({id: req.params.id}, req.body)
+        .then((response) => {res.json(respone)})
+        .catch( err => res.status(422).json(err));
+    },
+    delete: (req, res) => {
+        TodoItem.findByIdAndDelete(req.params.id)
+        .then((response) => {
+            res.json(response)
+        }).catch(err => res.status(422).json(err));
+
     }
 }
