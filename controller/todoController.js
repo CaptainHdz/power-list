@@ -1,5 +1,4 @@
 //A bunch of packages we will need 
-const mongoose = require("mongoose");
 const TodoItem = require("../models/todo");
 
 module.exports = {
@@ -27,8 +26,10 @@ module.exports = {
         }).catch( err => res.status(422).json(err));
     },
     update: (req, res) => {
-        TodoItem.findOneAndUpdate({id: req.params.id}, req.body)
-        .then((response) => {res.json(respone)})
+        TodoItem.findOneAndUpdate({_id: req.params.id }, req.body, (response) => {
+            res.json(response)
+            console.log(response)
+        })
         .catch( err => res.status(422).json(err));
     },
     delete: (req, res) => {
