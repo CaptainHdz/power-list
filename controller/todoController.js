@@ -26,7 +26,7 @@ module.exports = {
         }).catch( err => res.status(422).json(err));
     },
     update: (req, res) => {
-        TodoItem.findOneAndUpdate({_id: req.params.id }, req.body, (response) => {
+        TodoItem.findOneAndUpdate({_id: req.params.id }, req.body, () => {
             res.json("Updated Successfully")
         })
         .catch( err => res.status(422).json(err));

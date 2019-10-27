@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from 'axios';
 
 class Create extends Component {
     constructor(props) {
@@ -40,6 +41,17 @@ onSubmit(e) {
     e.preventDefault();
     console.log("Hey it works!");
     console.log(`Todo description: ${this.state.description}`)
+    console.log("Todo responsible: " + this.state.responsible);
+
+    const newTodo = {
+        Description: this.state.description,
+        Responsible: this.state.responsible,
+        Priority: this.state.priority,
+        Completed: this.state.completed
+    };
+    axios.post('/todos/add', newTodo)
+    .then(res => console.log(res))
+
     this.setState({
         description: "",
             responsible: "",

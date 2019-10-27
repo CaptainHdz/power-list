@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3001;
 
 // const Todo = require("./models/todo");
 // const todoRouter = express.Router()
