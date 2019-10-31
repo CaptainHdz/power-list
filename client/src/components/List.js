@@ -13,12 +13,34 @@ constructor (props) {
 
 componentDidMount() {
     axios.get("/todos/")
-    .then((response)=> console.log(response))
+    .then((response)=> {
+        const listItemsArr = response.data;
+        this.setState({
+            todos: listItemsArr
+        })
+    }).catch((err) => console.log(err))
 }
     render() {
         return (
             <div>
                 <h2>LIST COMPONENT</h2>
+                <div>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Responsible</th>
+                                <th>Priority</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.todos.map((todos) => {
+                                console.log(todos)
+                            })}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }
