@@ -39,7 +39,6 @@ onChangePriority(e) {
 
 onSubmit(e) {
     e.preventDefault();
-    console.log("Hey it works!");
     console.log(`Todo description: ${this.state.description}`)
     console.log("Todo responsible: " + this.state.responsible);
 

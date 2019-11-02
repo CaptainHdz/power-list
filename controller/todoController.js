@@ -3,7 +3,7 @@ const TodoItem = require("../models/todo");
 
 module.exports = {
     findAll: (req, res) => {
-        //Some fnacy route code
+        //Displays all items in the todo model
         TodoItem.find((err, todos) => {
             if (err) {console.log("DB error: " + err)}
             else {console.log(todos)};

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {Link} from 'react-router-dom';
 import axios from 'axios';
+import TodoItem from '../components/TodoItem'
 
 class List extends Component {
     
@@ -23,7 +23,7 @@ componentDidMount() {
     render() {
         return (
             <div>
-                <h2>LIST COMPONENT</h2>
+                <h2>WIN TODAY</h2>
                 <div>
                     <table className="table">
                         <thead>
@@ -35,9 +35,15 @@ componentDidMount() {
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.todos.map((todos) => {
-                                console.log(todos)
-                            })}
+                            {this.state.todos.map(todos => (
+                                <TodoItem 
+                                        id={todos._id}
+                                        key={todos._id}
+                                        description={todos.Description}
+                                        responsible={todos.Responsible}
+                                        priority={todos.Priority}
+                                        />
+                            ))}
                         </tbody>
                     </table>
                 </div>
