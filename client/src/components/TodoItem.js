@@ -8,7 +8,7 @@ function TodoItem(props) {
             <td>{props.responsible}</td>
             <td>{props.priority}</td>
             <td>
-                <Link to={"/edit" + props.id}>Edit Item</Link>
+                <Link to={"/edit/" + props.id}>Edit Item</Link>
             </td>
         </tr>
     )
