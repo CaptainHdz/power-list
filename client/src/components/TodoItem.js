@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 function TodoItem(props) {
     return (
         <tr>
-            <td>{props.description}</td>
+            <td className={props.completed ? '.completed' : ''}>{props.description}</td>
             <td>{props.responsible}</td>
             <td>{props.priority}</td>
             <td>

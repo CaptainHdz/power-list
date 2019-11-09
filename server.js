@@ -5,13 +5,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 3001;
 
-// const Todo = require("./models/todo");
-// const todoRouter = express.Router()
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/todos";
+
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
