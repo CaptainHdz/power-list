@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import '../index.css'
 
 function TodoItem(props) {
     return (
         <tr>
-            <td className={props.completed ? '.completed' : ''}>{props.description}</td>
+            <td className={props.completed ? 'completed' : ''}>{props.description}</td>
             <td>{props.responsible}</td>
             <td>{props.priority}</td>
             <td>

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from 'axios';
 import TodoItem from '../components/TodoItem'
+import '../index.css'
 
 class List extends Component {
     
@@ -12,6 +13,16 @@ constructor (props) {
 }
 
 componentDidMount() {
+    axios.get("/todos/")
+    .then((response)=> {
+        const listItemsArr = response.data;
+        this.setState({
+            todos: listItemsArr
+        })
+    }).catch((err) => console.log(err))
+}
+
+componentDidUpdate() {
     axios.get("/todos/")
     .then((response)=> {
         const listItemsArr = response.data;
@@ -42,6 +53,7 @@ componentDidMount() {
                                         description={todos.Description}
                                         responsible={todos.Responsible}
                                         priority={todos.Priority}
+                                        completed={todos.Completed}
                                         />
                             ))}
                         </tbody>
