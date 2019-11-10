@@ -11,7 +11,7 @@ constructor (props) {
         todos: []
     };
 }
-
+//The request grabs data from the db and sets them to the state
 componentDidMount() {
     axios.get("/todos/")
     .then((response)=> {

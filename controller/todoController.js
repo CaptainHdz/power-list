@@ -22,19 +22,19 @@ module.exports = {
         //Some more fancy code 
         TodoItem.create(req.body)
         .then((response) => {
-            res.json(response);
+            res.json("Create Successful: " + response);
         }).catch( err => res.status(422).json(err));
     },
     update: (req, res) => {
         TodoItem.findOneAndUpdate({_id: req.params.id }, req.body, () => {
-            res.json("Updated Successfully")
+            res.json("Updated Successful")
         })
         .catch( err => res.status(422).json(err));
     },
     delete: (req, res) => {
         TodoItem.findByIdAndDelete(req.params.id)
         .then((response) => {
-            res.json(response)
+            res.json("Delete Successful: " + response)
         }).catch(err => res.status(422).json(err));
 
     }

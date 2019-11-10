@@ -10,6 +10,7 @@ this.onChangeResponsible = this.onChangeResponsible.bind(this);
 this.onChangePriority = this.onChangePriority.bind(this);
 this.onChangeCompleted = this.onChangeCompleted.bind(this);
 this.onSubmit = this.onSubmit.bind(this);
+this.deleteTask = this.deleteTask.bind(this)
 
         this.state = {
             description: '',
@@ -72,6 +73,15 @@ onSubmit(e) {
         this.props.history.push('/')
     })
 }
+deleteTask(e) {
+    e.preventDefault()
+
+    axios.delete("/todos/delete/" + this.props.match.params.id)
+    .then((response) => {
+        console.log(response)
+        this.props.history.push('/')
+    })
+};
 
     render() {
         return (
@@ -142,6 +152,9 @@ onSubmit(e) {
                         <br/>
                         <div className="form-group">
                             <input type="submit" value="Update Task" className="btn btn-primary"/>
+                        </div>
+                        <div className="form-group">
+                            <input type="button" onClick={this.deleteTask} value="Delete Task" className="btn btn-danger"/>
                         </div>
                     </div>
                 </form>

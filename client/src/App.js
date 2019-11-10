@@ -27,7 +27,6 @@ function App() {
 </nav>
 
     <div className="container"> 
-      <h1>MERN APP IN PROGRESS</h1>
     <Route path="/" exact component={List} />
     <Route path="/edit/:id" component={EditList} />
     <Route path="/create" component={Create} />

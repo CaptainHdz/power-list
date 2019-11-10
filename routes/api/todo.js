@@ -14,7 +14,10 @@ router.route("/add")
 .post(todoController.create);
 
 router.route("/update/:id")
-.post(todoController.update)
+.post(todoController.update);
+
+router.route("/delete/:id")
+.delete(todoController.delete);
 
 module.exports = router;
 

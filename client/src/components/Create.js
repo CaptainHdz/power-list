@@ -62,7 +62,7 @@ onSubmit(e) {
     render() {
         return (
             <div className="mt-1">
-                <h3>Create New To Do</h3>
+                <h3>Create New Task</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group" >
                         <label>Description:</label>
