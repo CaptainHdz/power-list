@@ -34,6 +34,10 @@ if (process.env.NODE_ENV === 'production') {
       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
   }
+//More production code for routes
+  router.use(function(req, res) {
+    res.sendFile( path.join(__dirname, '../client/build/index.html'));
+  });
 
 
 app.listen(PORT, () => {
