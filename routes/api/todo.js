@@ -19,5 +19,10 @@ router.route("/update/:id")
 router.route("/delete/:id")
 .delete(todoController.delete);
 
+//More production code for routes
+router.use(function(req, res) {
+    res.sendFile( path.join(__dirname, '../client/build/index.html'));
+  });
+
 module.exports = router;
 
