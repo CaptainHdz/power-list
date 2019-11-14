@@ -21,6 +21,6 @@
   color: #09d3ac;
 }
 
-.completed {
-  text-decoration: line-through;
+.navbar {
+  box-shadow: 0px 2px 10px 5px #332f2f;
 }

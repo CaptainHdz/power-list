@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import axios from 'axios';
+import '../index.css';
 
 class Create extends Component {
     constructor(props) {
@@ -62,7 +63,7 @@ onSubmit(e) {
     render() {
         return (
             <div className="mt-1">
-                <h3>Create New Task</h3>
+                <h2>Create New Task</h2>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group" >
                         <label>Description:</label>
