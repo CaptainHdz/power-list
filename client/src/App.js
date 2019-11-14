@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 import Create from "./components/Create";
 import EditList from "./components/EditList";
 import List from "./components/List";
+import Card from './components/QuoteCard';
 function App() {
   return (
     <Router>
@@ -31,6 +32,8 @@ function App() {
     <Route path="/edit/:id" component={EditList} />
     <Route path="/create" component={Create} />
     </div>
+
+    <Card/>
       </div>
   
     </Router>
