@@ -4,13 +4,13 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 import Create from "./components/Create";
 import EditList from "./components/EditList";
 import List from "./components/List";
-import Card from './components/QuoteCard';
+// import Card from './components/QuoteCard';
 function App() {
   return (
     <Router>
       <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-  <a className="navbar-brand" href="https://captainhdz.github.io/portfolioV3/" target="/blank">Power List</a>
+  <a className="navbar-brand nav-title" href="https://captainhdz.github.io/portfolioV3/" target="/blank">Power List</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
@@ -32,8 +32,6 @@ function App() {
     <Route path="/edit/:id" component={EditList} />
     <Route path="/create" component={Create} />
     </div>
-
-    <Card/>
       </div>
   
     </Router>

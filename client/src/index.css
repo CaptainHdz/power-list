@@ -21,6 +21,13 @@ h2 {
 
 }
 
-div.quote {
+div.quote-card {
   width: 50%;
+  box-shadow: 5px 10px 10px 1px #474242;
+
+}
+
+p.quote {
+    font-family: 'Anonymous Pro', monospace;
+
 }

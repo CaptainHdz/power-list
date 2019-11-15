@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import axios from 'axios';
-import TodoItem from '../components/TodoItem'
-import '../index.css'
+import TodoItem from '../components/TodoItem';
+import '../index.css';
+import Card from './QuoteCard';
 
 class List extends Component {
     
@@ -59,6 +60,8 @@ componentDidUpdate() {
                         </tbody>
                     </table>
                 </div>
+
+                <Card/>
             </div>
         )
     }
