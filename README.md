@@ -6,9 +6,10 @@ A task app with the ability to create new tasks, edit tasks, and delete them. Fe
 ## Technologies 
 -MongoDB/Mongoose database
 -Express
--React.js
--Node.js
-
+-React.JS
+-Node.JS
+-CSS3
+-HTML5
 -Front-end Design Library: Bootstrap
 
 **Live Link:** https://obscure-shelf-60013.herokuapp.com/
