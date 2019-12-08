@@ -16,7 +16,7 @@ class Card extends Component {
         const quotes = [
             {quote: 'You miss 100% of the shots you dont take.', author: 'Wayne Gretzky'},
             {quote: 'If you cannot do great things, do small things in a great way.', author: 'Napoleon Hill'},
-            {quote: 'If not us, who? If not now, when?.', author: 'Hillel the Elder'},
+            {quote: 'If not us, who? If not now, when?', author: 'Hillel the Elder'},
             {quote: 'He that is good for making excuses, is seldom good for anything else.', author: 'Benjamin Franklin'},
             {quote: 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.', author: 'Aristotle'},
             {quote: 'If you spend too much time thinking about a thing, you will never get it done.', author: 'Bruce Lee'},

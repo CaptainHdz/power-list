@@ -10,6 +10,6 @@ A task app with the ability to create new tasks, edit tasks, and delete them. Fe
 * -Node.JS
 * -CSS3
 * -HTML5
-* -Front-end Design Library: Bootstrap
+* -Front End CSS Library: Bootstrap
 
 **Live Link:** https://obscure-shelf-60013.herokuapp.com/
